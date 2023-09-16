@@ -36,7 +36,7 @@ def recommend(movie):
     return recommended_movie_names,recommended_movie_posters
 
 
-st.header('Movie Recommender System')
+st.header('Movie VH Recommender System')
 movies = pickle.load(open('movie_list_1.pkl','rb'))
 similarity = pickle.load(open('similarity.pkl','rb'))
 
@@ -46,7 +46,7 @@ selected_movie = st.selectbox(
     movie_list
 )
 
-if st.button('Show VH Recommendation'):
+if st.button('Show Recommendation'):
     recommended_movie_names,recommended_movie_posters = recommend(selected_movie)
     col1, col2, col3, col4 = st.columns(5)
     with col1:
