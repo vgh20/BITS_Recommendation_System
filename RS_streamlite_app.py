@@ -46,7 +46,7 @@ selected_movie = st.selectbox(
     movie_list
 )
 
-if st.button('Show Vani's Recommendation'):
+if st.button('Show VH Recommendation'):
     recommended_movie_names,recommended_movie_posters = recommend(selected_movie)
     col1, col2, col3, col4 = st.columns(5)
     with col1:
